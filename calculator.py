@@ -28,14 +28,14 @@ def redo():
 
     looper = 1
 
-    while looper = 1:
+    while looper == 1:
         redoans = raw_input("Would you like to peform another operation? Y/N \n>")
 
-        if redoans == "Y" or "y":
+        if redoans == "Y" or redoans == "y":
             i = 1
             looper = 2
 
-        elif redoans == "N" or "n":
+        elif redoans == "N" or redoans ==5 "n":
             i = 2
             looper = 2
 
@@ -62,15 +62,19 @@ while i == 1:
         (num1, num2) = numselect(operation)
         answernum = div(num1, num2)
         print "The quotient of %i and %i is %i" % (num1, num2, answernum)
+        i = redo()
 
     elif operation == "Add" or operation == "add":
         (num1, num2) = numselect(operation)
-        ansernum = add(num1, num2)
+        answernum = add(num1, num2)
         print "The sum of %i and %i is %i" % (num1, num2, answernum)
+        i = redo()
 
     elif operation == "Subtract" or operation == "subtract":
         (num1, num2) = numselect(operation)
         answernum = sub(num1, num2)
+        print "The difference of %i and %i is %i" % (num1, num2, answernum)
+        i = redo()
 
     else:
         print "Please choose either Add, Subtract, Multiply, or Divide"
